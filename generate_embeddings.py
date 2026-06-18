@@ -16,7 +16,7 @@ chunks = text_splitter.split_documents(documents)
 
 # Create embeddings
 embeddings = GoogleGenerativeAIEmbeddings(
-    model="models/embedding-001"
+    model="models/gemini-embedding-001"
 )
 
 # Generate vector for first chunk
