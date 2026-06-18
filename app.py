@@ -34,7 +34,7 @@ llm = ChatGoogleGenerativeAI(
 )
 
 # Load Embeddings
-GoogleGenerativeAIEmbeddings(
+embeddings = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001"
 )
 
