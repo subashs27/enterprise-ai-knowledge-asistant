@@ -1,85 +1,84 @@
 # Enterprise AI Knowledge Assistant
 
-## Overview
+## 📖 Overview
 
-Enterprise AI Knowledge Assistant is a Retrieval-Augmented Generation (RAG) application that helps employees get instant answers from company policy documents.
+Enterprise AI Knowledge Assistant is a Retrieval-Augmented Generation (RAG) application that enables employees to query company documents using natural language. The system combines Hybrid Search (FAISS + BM25), Cross-Encoder Re-ranking, and Google's Gemini 2.5 Flash to generate accurate, context-aware answers with supporting evidence.
 
-The system uses LangChain, FAISS, HuggingFace Embeddings, Google Gemini 2.5 Flash, and Streamlit to retrieve relevant information and generate accurate responses with source citations.
+The application minimizes hallucinations by restricting responses to retrieved document content and displays evidence along with confidence scores for transparency.
 
 ---
 
 ## Features
 
-- Natural language question answering
-- Company policy document search
-- FAISS vector database
-- Gemini 2.5 Flash integration
-- Source citation support
-- Streamlit chat interface
+Hybrid Retrieval (FAISS + BM25)
+Cross-Encoder Re-ranking
+Query Rewriting
+Enterprise RAG Pipeline
+Gemini 2.5 Flash
+Evidence Viewer
+Confidence Score
+New Chat
+Chat History
+Hallucination Prevention
+Streamlit UI
 
 ---
 
 ## Tech Stack
 
-- Python
-- LangChain
-- FAISS
-- HuggingFace Embeddings
-- Google Gemini 2.5 Flash
-- Streamlit
+Python
+Streamlit
+LangChain
+FAISS
+BM25
+Sentence Transformers
+Gemini API
 
 ---
 
 ## Architecture
 
-Company PDF Files
-
-↓
-
-PDF Loader
-
-↓
-
-Text Chunking
-
-↓
-
-Embeddings
-
-↓
-
-FAISS Vector Store
-
-↓
-
-Retriever
-
-↓
-
+User Query
+      │
+      ▼
+Query Rewrite
+      │
+      ▼
+Hybrid Search
+ (FAISS + BM25)
+      │
+      ▼
+Cross Encoder
+      │
+      ▼
+Top 3 Chunks
+      │
+      ▼
 Gemini 2.5 Flash
-
-↓
-
-Streamlit Chat UI
-
-↓
-
-Answer + Source Citation
-
----
+      │
+      ▼
+Answer + Evidence
 
 ## Sample Questions
 
-- How many annual leave days are employees entitled to?
-- How do employees submit leave requests?
-- What is the company dress code?
-- What are the performance review guidelines?
+Try asking questions like:
+
+- What is the Work From Home policy?
+- Who is eligible for remote work?
+- How much is the internet reimbursement?
+- What are the employee leave policies?
+- What benefits are provided to employees?
+- What are the core working hours?
+- Is manager approval required for remote work?
+- What are the performance expectations for remote employees?
+- What documents mention insurance benefits?
+- Does the company have a mandatory haircut policy?
 
 ---
 
 ## Future Enhancements
 
-- Multi-document source citations
-- PDF source links
-- Conversation memory
-- Role-based document access
+- Multi-user authentication and role-based access
+- Advanced analytics dashboard
+- Multi-language document support
+- Voice-based question answering
